@@ -8,10 +8,12 @@ Group:		Libraries
 Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.1/%{name}-%{version}.tar.gz
 # Source0-md5:	69e65f708399802ffce434716ea7714e
 URL:		http://www.clutter-project.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	clutter-devel
-BuildRequires:	cairo-devel
+BuildRequires:	autoconf >= 2.53
+BuildRequires:	automake >= 1:1.7
+BuildRequires:	clutter-devel >= 0.2
+BuildRequires:	cairo-devel >= 1.4
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +27,8 @@ Summary:	Header files for clutter-cairo library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki clutter-cairo
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	clutter-devel >= 0.2
+Requires:	cairo-devel >= 1.4
 
 %description devel
 Header files for clutter-cairo library.
@@ -48,10 +52,13 @@ Statyczna biblioteka clutter-cairo.
 %setup -q
 
 %build
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
-%configure
+%configure \
+	--enable-static
 
 %{__make}
 
@@ -69,12 +76,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%doc ChangeLog README
+%attr(755,root,root) %{_libdir}/libclutter-cairo-*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/clutter-*
-%{_libdir}/lib*.la
-%{_libdir}/lib*.so
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/libclutter-cairo-*.so
+%{_libdir}/libclutter-cairo-*.la
+%{_includedir}/clutter-cairo-*
+%{_pkgconfigdir}/clutter-cairo-*.pc
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libclutter-cairo-*.a
