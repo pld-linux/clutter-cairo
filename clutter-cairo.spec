@@ -1,13 +1,13 @@
-#
 Summary:	Library integrating clutter with Cairo
+Summary(pl.UTF-8):	Biblioteka integrująca clutter z Cairo
 Name:		clutter-cairo
 Version:	0.1.0
 Release:	1
-License:	GPL v2
-Group:		Applications
+License:	LGPL v2+
+Group:		Libraries
 Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.1/%{name}-%{version}.tar.gz
 # Source0-md5:	69e65f708399802ffce434716ea7714e
-URL:		http://www.clutter-project.com/
+URL:		http://www.clutter-project.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	clutter-devel
@@ -15,15 +15,10 @@ BuildRequires:	cairo-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Clutter is an open source software library for creating fast, visually
-rich graphical user interfaces. The most obvious example of potential
-usage is in media center type applications. We hope however it can be
-used for a lot more.
+Library integrating clutter with Cairo.
 
-Clutter uses OpenGL (and soon optionally OpenGL ES) for rendering but
-with an API which hides the underlying GL complexity from the
-developer. The Clutter API is intended to be easy to use, efficient
-and flexible.
+%description -l pl.UTF-8
+Biblioteka integrująca clutter z Cairo.
 
 %package devel
 Summary:	Header files for clutter-cairo library
