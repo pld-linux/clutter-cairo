@@ -1,16 +1,16 @@
 Summary:	Library integrating clutter with Cairo
 Summary(pl.UTF-8):	Biblioteka integrująca clutter z Cairo
 Name:		clutter-cairo
-Version:	0.4.0
+Version:	0.6.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.4/%{name}-%{version}.tar.gz
-# Source0-md5:	ea1f5bda09c8bce3a2ed019d62f4386a
+Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.6/%{name}-%{version}.tar.gz
+# Source0-md5:	0be2d3c2bb1882b266673f7d9106fc2d
 URL:		http://www.clutter-project.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.7
-BuildRequires:	clutter-devel >= 0.4
+BuildRequires:	clutter-devel >= 0.6.0
 BuildRequires:	cairo-devel >= 1.4
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -27,7 +27,7 @@ Summary:	Header files for clutter-cairo library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki clutter-cairo
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	clutter-devel >= 0.4
+Requires:	clutter-devel >= 0.6.0
 Requires:	cairo-devel >= 1.4
 
 %description devel
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libclutter-cairo-*.so
 %{_libdir}/libclutter-cairo-*.la
-%{_includedir}/clutter-0.4/clutter-cairo
+%{_includedir}/clutter-0.6/clutter-cairo
 %{_pkgconfigdir}/clutter-cairo-*.pc
 
 %files static
