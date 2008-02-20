@@ -9,7 +9,7 @@ Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.6/%{name}-%{vers
 # Source0-md5:	0be2d3c2bb1882b266673f7d9106fc2d
 URL:		http://www.clutter-project.org/
 BuildRequires:	autoconf >= 2.53
-BuildRequires:	automake >= 1:1.7
+BuildRequires:	automake >= 1:1.9
 BuildRequires:	clutter-devel >= 0.6.0
 BuildRequires:	cairo-devel >= 1.4
 BuildRequires:	libtool
@@ -77,15 +77,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%attr(755,root,root) %{_libdir}/libclutter-cairo-*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libclutter-cairo-0.6.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libclutter-cairo-0.6.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libclutter-cairo-*.so
-%{_libdir}/libclutter-cairo-*.la
+%attr(755,root,root) %{_libdir}/libclutter-cairo-0.6.so
+%{_libdir}/libclutter-cairo-0.6.la
 %{_includedir}/clutter-0.6/clutter-cairo
-%{_pkgconfigdir}/clutter-cairo-*.pc
+%{_pkgconfigdir}/clutter-cairo-0.6.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libclutter-cairo-*.a
+%{_libdir}/libclutter-cairo-0.6.a
