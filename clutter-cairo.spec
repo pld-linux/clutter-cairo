@@ -1,16 +1,16 @@
 Summary:	Library integrating clutter with Cairo
 Summary(pl.UTF-8):	Biblioteka integrująca clutter z Cairo
 Name:		clutter-cairo
-Version:	0.6.0
+Version:	0.6.2
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.6/%{name}-%{version}.tar.gz
-# Source0-md5:	0be2d3c2bb1882b266673f7d9106fc2d
+# Source0-md5:	15fa0ba0adfbee223ec32667adb1f3af
 URL:		http://www.clutter-project.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	clutter-devel >= 0.6.0
+BuildRequires:	clutter-devel >= 0.6.4
 BuildRequires:	cairo-devel >= 1.4
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
