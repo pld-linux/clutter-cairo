@@ -1,16 +1,17 @@
 Summary:	Library integrating clutter with Cairo
 Summary(pl.UTF-8):	Biblioteka integrująca clutter z Cairo
 Name:		clutter-cairo
-Version:	0.6.2
-Release:	2
+Version:	0.8.2
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.6/%{name}-%{version}.tar.gz
-# Source0-md5:	15fa0ba0adfbee223ec32667adb1f3af
+Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.8/%{name}-%{version}.tar.gz
+# Source0-md5:	c3bfae082d007be37d9725e5e7b4a30b
 URL:		http://www.clutter-project.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	clutter-devel >= 0.6.4
+BuildRequires:	clutter-devel >= 0.8.2
+BuildRequires:  clutter-devel < 0.9
 BuildRequires:	cairo-devel >= 1.4
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
@@ -27,7 +28,8 @@ Summary:	Header files for clutter-cairo library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki clutter-cairo
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	clutter-devel >= 0.6.0
+Requires:	clutter-devel >= 0.8.2
+Requires:	clutter-devel < 0.9
 Requires:	cairo-devel >= 1.4
 
 %description devel
@@ -77,16 +79,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%attr(755,root,root) %{_libdir}/libclutter-cairo-0.6.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libclutter-cairo-0.6.so.0
+%attr(755,root,root) %{_libdir}/libclutter-cairo-0.8.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libclutter-cairo-0.8.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libclutter-cairo-0.6.so
-%{_libdir}/libclutter-cairo-0.6.la
-%{_includedir}/clutter-0.6/clutter-cairo
-%{_pkgconfigdir}/clutter-cairo-0.6.pc
+%attr(755,root,root) %{_libdir}/libclutter-cairo-0.8.so
+%{_libdir}/libclutter-cairo-0.8.la
+%{_includedir}/clutter-0.8/clutter-cairo
+%{_pkgconfigdir}/clutter-cairo-0.8.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libclutter-cairo-0.6.a
+%{_libdir}/libclutter-cairo-0.8.a
