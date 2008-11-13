@@ -10,9 +10,9 @@ Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.8/%{name}-%{vers
 URL:		http://www.clutter-project.org/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake >= 1:1.9
-BuildRequires:	clutter-devel >= 0.8.2
-BuildRequires:  clutter-devel < 0.9
 BuildRequires:	cairo-devel >= 1.4
+BuildRequires:	clutter-devel >= 0.8.2
+BuildRequires:	clutter-devel < 0.9
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -28,9 +28,9 @@ Summary:	Header files for clutter-cairo library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki clutter-cairo
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	cairo-devel >= 1.4
 Requires:	clutter-devel >= 0.8.2
 Requires:	clutter-devel < 0.9
-Requires:	cairo-devel >= 1.4
 
 %description devel
 Header files for clutter-cairo library.
