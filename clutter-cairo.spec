@@ -2,7 +2,7 @@ Summary:	Library integrating clutter with Cairo
 Summary(pl.UTF-8):	Biblioteka integrująca clutter z Cairo
 Name:		clutter-cairo
 Version:	0.8.2
-Release:	2
+Release:	3
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://www.clutter-project.org/sources/clutter-cairo/0.8/%{name}-%{version}.tar.gz
